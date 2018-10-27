@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include "head_header.html" %}
+    <title>Join | {{ event_title }}</title>
+    <meta property="description" content="Join {{ event_title }}" />
+</head>
+<body>
+
+<!-- Header -->
+  <div class="ui inverted blue vertical masthead center aligned segment">
+      <div class="ui green inverted segment">
+          <h1 class="ui white header">
+            {{ event_title }}
+          </h1>
+      </div>
+        <div class="ui text container">
+          <div class="ui large secondary inverted menu">
+            <a href="/" class="item">Info</a>
+            <a href="about" class="item">About</a>
+            <a href="join" class="active item">Join</a>
+            <a href="result" class="item">Result</a>
+          </div>
+        </div>
+  </div>
+
+
+<div class="ui vertical stripe segment">
+    <div class="ui text container">
+          <h3 class="ui horizontal header divider">
+            <a href="#">Not Yet Started</a>
+          </h3>
+          <p>The event has not started. It will be started at {{ start_datetime }} UTC.</p>
+          <p>Meanwhile, why don't you tell your friends about this? This tournament won't be fun without sufficient players! :)</p>
+          <p>Certificate of Participation will be issued to all of the participants!</p>
+    </div>
+</div>
+{% include "footer.html" %}
+</body>
+</html>

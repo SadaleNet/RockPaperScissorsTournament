@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include "head_header.html" %}
+    <title>{{ event_title }}</title>
+    <meta name="robots" content="noindex">
+</head>
+<body>
+
+<!-- Title -->
+  <div class="ui inverted blue vertical masthead center aligned segment">
+      <div class="ui green inverted segment">
+          <h1 class="ui white header">
+            {{ event_title }}
+          </h1>
+      </div>
+        <div class="ui text container">
+          <div class="ui large secondary inverted menu">
+            <a href="." class="item">Info</a>
+            <a href="about" class="item">About</a>
+            <a href="join" class="active item">Join</a>
+            <a href="result" class="item">Result</a>
+          </div>
+        </div>
+  </div>
+
+<!-- Content -->
+  <div class="ui vertical stripe segment">
+    <div class="ui text container">
+          <h3 class="ui horizontal header divider">
+            <a href="#">Submitted Successfully</a>
+          </h3>
+            <p>Like this tournament? Spread the fun! Let your friends know about this! This tournament would be boring without enough players!</p>
+            <p>The result will be released in {{ end_datetime }} UTC.</p>
+  </div>
+  <br><br>
+  {% include "footer.html" %}
+</body>
+</html>

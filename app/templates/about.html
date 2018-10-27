@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include "head_header.html" %}
+    <title>About | {{ event_title }}</title>
+    <meta property="description" content="About {{ event_title }}" />
+</head>
+<body>
+
+<!-- Header -->
+  <div class="ui inverted blue vertical masthead center aligned segment">
+      <div class="ui green inverted segment">
+          <h1 class="ui white header">
+            {{ event_title }}
+          </h1>
+      </div>
+        <div class="ui text container">
+          <div class="ui large secondary inverted menu">
+            <a href="." class="item">Info</a>
+            <a href="about" class="active item">About</a>
+            <a href="join" class="item">Join</a>
+            <a href="result" class="item">Result</a>
+          </div>
+        </div>
+  </div>
+
+<!-- Content -->
+  <div class="ui vertical stripe segment">
+    <div class="ui text container">
+          <h3 class="ui horizontal header divider">
+            <a href="#">History</a>
+          </h3>
+            <p>This tournament is originated from <a href="http://rsp.sadale.duckdns.org/">The International Asynchronous Rock Scissors Paper Competition</a> in the April Fool of 2015. The original website were developed using Python with Django. No work were put onto the UI design of the website. Therefore, the website looks ugly. And it wasn't possible for the player to pick the representing nation.</p>
+            <p>In April Fool of 2016, the tournament tried to reach out more players by making this event more like an internation event. Similar to Olympic Games, we tried passing the host to different country in each year. With improved UI of the website using Semantic-UI, <a href="https://web.archive.org/web/20160404141437/http://polish-rps.duckdns.org/result">the event managed to get 29 players!</a> The event was hosted by someone living in Poland. It was possible for the players to pick their representing country.</p>
+            <p>In April Fool of 2017, we've got a hoster from yet another country. Unfornately, the hoster failed to setup the website on time. Therefore, the event was cancelled.</p>
+            <p>In April Fool of 2018, Sadale took back control of the event. The frontend was pretty much the same as the 2017 one. But the backend were re-written using Flask. In addition, a few new features were implemented, including certificate of participation and a more human-friendly captcha system. The event went smoothly and everyone were happily taking the post-participation certificate.</p>
+ 
+            <p>In October 2018, Sadale had dockerized the Flask webapp and released the source code of the program to <a href="https://github.com/SadaleNet/RockPaperScissorsTournament">https://github.com/SadaleNet/RockPaperScissorsTournament</a>. This event is hosted by using the webapp released to the aforementioned github link.</p>
+
+          <h3 class="ui horizontal header divider">
+            <a href="#">Why Joining This Event?</a>
+          </h3>
+            <p>Certificate of Participation will be issued to all of the participants! Show it to your friends and they'll be envious. Show it to your parents and they'll be proud of you. Show it to your crush and he/she'll instantly marry you. Show it to your teacher and you can graduate from highschool immediately. Show it to Harvard or Stanford or MIT and you'll get admitted to it right away. Show it to whitehouse and you can get your student debt waived. Show it to your boss that you'll get promoted. Show it to Kim Jong Un and he'll grant you full control of his regime. So why don't you join it for this super awesome certificate? :)</p>
+          <h3 class="ui horizontal header divider">
+            <a href="#">Credits</a>
+          </h3>
+            <div class="ui bulleted list">
+              <div class="item"><a href="https://sadale.net">Sadale</a> - Developer of the web app.</div>
+            </div>
+  </div>
+  <br><br>
+  {% include "footer.html" %}
+</body>
+</html>

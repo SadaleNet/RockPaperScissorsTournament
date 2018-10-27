@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include "head_header.html" %}
+    <title>Join | {{ event_title }}</title>
+    <meta property="description" content="Join {{ event_title }}" />
+</head>
+<body>
+
+<!-- Header -->
+  <div class="ui inverted blue vertical masthead center aligned segment">
+      <div class="ui green inverted segment">
+          <h1 class="ui white header">
+            {{ event_title }}
+          </h1>
+      </div>
+        <div class="ui text container">
+          <div class="ui large secondary inverted menu">
+            <a href="/" class="item">Info</a>
+            <a href="about" class="item">About</a>
+            <a href="join" class="item">Join</a>
+            <a href="result" class="active item">Result</a>
+          </div>
+        </div>
+  </div>
+
+
+<div class="ui vertical stripe segment">
+    <div class="ui text container">
+          <h3 class="ui horizontal header divider">
+            <a href="#">Not Yet Released</a>
+          </h3>
+          <p>The result has not released. It will be available in {{ end_datetime }} UTC.</p>
+    </div>
+</div>
+{% include "footer.html" %}
+</body>
+</html>

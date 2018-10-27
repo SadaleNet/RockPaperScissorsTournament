@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include "head_header.html" %}
+    <title>Result | {{ event_title }}</title>
+    <meta property="description" content="Result of {{ event_title }}" />
+</head>
+<body>
+
+<!-- Header -->
+  <div class="ui inverted blue vertical masthead center aligned segment">
+      <div class="ui green inverted segment">
+          <h1 class="ui white header">
+            {{ event_title }}
+          </h1>
+      </div>
+        <div class="ui text container">
+          <div class="ui large secondary inverted menu">
+            <a href="/" class="item">Info</a>
+            <a href="about" class="item">About</a>
+            <a href="join" class="item">Join</a>
+            <a href="result" class="active item">Result</a>
+          </div>
+        </div>
+  </div>
+
+<div class="ui vertical stripe segment">
+    <div class="ui text container">
+          <h3 class="ui horizontal header divider">
+            <a href="#">Result Released</a>
+          </h3>
+          <p>
+            {% if players %}
+                <table class="ui celled table">
+                <tr><thead><th>Rank</th><th>Nick</th><th>Score</th><th>Hands played</th><th>Certificate</th></thead></tr>
+                <tbody>
+                {% for player in players %}
+                    <tr>
+                       <td>{{ player.i }}</td>
+                       <td class="single line"><i class="{{ player.country }} flag"></i>{{ player.nick }}</td>
+                       <td>{{ player.score }}</td>
+                       <td>{{ player.played }}</td>
+                       <td><a href="/certificate/{{ player.nick }}">View Cert</a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+                </table>
+            {% else %}
+                <p>No one ever played this game. What a pity!</p>
+            {% endif %}
+          </p>
+          <h3 class="ui horizontal header divider">
+            <a href="#">Thanks for playing!</a>
+          </h3>
+    </div>
+</div>
+{% include "footer.html" %}
+</body>
+</html>

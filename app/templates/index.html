@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include "head_header.html" %}
+    <title>{{ event_title }}</title>
+    <meta property="description" content="Official website of {{ event_title }}" />
+</head>
+<body>
+<!-- Title -->
+  <div class="ui inverted blue vertical masthead center aligned segment">
+      <div class="ui green inverted segment">
+          <h1 class="ui white header">
+            {{ event_title }}
+          </h1>
+      </div>
+        <div class="ui text container">
+          <div class="ui large secondary inverted menu">
+            <a href="." class="active item">Info</a>
+            <a href="about" class="item">About</a>
+            <a href="join" class="item">Join</a>
+            <a href="result" class="item">Result</a>
+          </div>
+        </div>
+  </div>
+
+<!-- Content -->
+  <div class="ui vertical stripe segment">
+    <div class="ui text container">
+          <h3 class="ui horizontal header divider">
+            <a href="#">General Info</a>
+          </h3>
+            {{ event_title }} is an online RPS tournament!<br>
+            <div class="ui bulleted list">
+              <div class="item">Start: {{ start_datetime }} UTC</div>
+              <div class="item">End: {{ end_datetime }} UTC</div>
+              <div class="item">Location: Internet</div>
+              <div class="item">Participation Criteria: Anyone from any country</div>
+              <div class="item">Participation Certificate will be issued</div>
+            </div>
+          <h3 class="ui horizontal header divider">
+            <a href="#">Rules</a>
+          </h3>
+            <p>During any time of the tournament, choose a nick, your country and a series of 50 hands to be played. These will be played against each player, hand by hand, player by player. You get a point if you win, loss a point if you lose. The guy with the most point is the winner.</p>
+            <p>According to our <a href="http://rsp.sadale.duckdns.org/">previous experience</a>, it is easy to win the game by playing a series of 50 identical hands. Therefore, we do not allow player to play more than a consecutive of 5 identical hands in this event. We believe that it can make the game more fair.</p>
+          <h3 class="ui horizontal header divider">
+            <a href="#">Example</a>
+          </h3>
+            <p>To make this example simplier, the players only play 5 hands instead of 50 hands in the actual tournament.</p>
+            <p>Says, there are three participants in the event:</p>
+            <table class="ui celled table">
+            <tr><thead><th>Nick</th><th>Hands played</th></thead></tr>
+            <tbody>
+            <tr><td>John</td><td>Scissors, Rock, Rock, Rock, Rock</td></tr>
+            <tr><td>Matt</td><td>Scissors, Scissors, Scissors, Scissors, Scissors</td></tr>
+            <tr><td>Emma</td><td>Paper, Paper, Paper, Paper, Paper</td></tr>
+            </tbody>
+            </table>
+            <p>The score of John can be evaluate in this way. First, The hands of John is played against Matt. In the first hand played, it's a tie. In all the four subsequence hands, John wins. Therefore, the score John against Matt is 4.</p>
+            <p>After that, the hands of John is played against Emma. In the first hand played, John wins. In all the four subsequence hands, John loses. Therefore, the score of John against Emma is 1-4=-3</p>
+            <p>The total score of John is the sum of games against all players. Therefore, it is 4-3 = 1</p>
+            <p>The score of Matt and Emma can be similarly evaluated. They are 1 and -2 respectively.</p>
+            <p>Since both John and Matt have the same highest score, they win the game.</p>
+            <p>Please notice that in the real game, 50 hands are played instead of 5.</p>
+          <h3 class="ui horizontal header divider">
+            <a href="#">How do I join?</a>
+          </h3>
+            <p>No preregistration is needed. During the event, just fill in your nick, the 50 hands to be played and your country after the tournament starts.</p>
+            <p>You don't have to use your real name nor your actual country of origin. Just use whatever nick and country you want.</p>
+  </div>
+  <br><br>
+  {% include "footer.html" %}
+</body>
+</html>
