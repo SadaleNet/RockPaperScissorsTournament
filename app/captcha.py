@@ -72,4 +72,4 @@ def setup_db():
         conn.commit()
         conn.close()
     if not os.path.exists(CAPTCHA_DIR):
-        os.mkdir(CAPTCHA_DIR, mode=755)
+        os.mkdir(CAPTCHA_DIR, mode=0o755)
